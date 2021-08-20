@@ -2,7 +2,8 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
-
+<!--매듭법, 채비, 바다정보, 포인트넣기
+-->
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_home"
