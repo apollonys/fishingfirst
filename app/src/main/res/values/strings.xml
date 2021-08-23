@@ -10,5 +10,6 @@
 
     <string name="menu_home">Home</string>
     <string name="menu_knot">매듭법</string>
-    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_preparation">어종별 채비</string>
+    <string name="menu_point">포인트</string>
 </resources>

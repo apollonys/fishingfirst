@@ -18,8 +18,14 @@
         tools:layout="@layout/fragment_knot" />
 
     <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.ys.fishingfirst.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        android:id="@+id/nav_preparation"
+        android:name="com.ys.fishingfirst.ui.preparation.PreparationFragment"
+        android:label="@string/menu_preparation"
+        tools:layout="@layout/fragment_preparation" />
+
+    <fragment
+        android:id="@+id/nav_point"
+        android:name="com.ys.fishingfirst.ui.preparation.PreparationFragment"
+        android:label="@string/menu_point"
+        tools:layout="@layout/fragment_preparation" />
 </navigation>
