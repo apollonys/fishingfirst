@@ -25,7 +25,7 @@
 
     <fragment
         android:id="@+id/nav_point"
-        android:name="com.ys.fishingfirst.ui.preparation.PreparationFragment"
+        android:name="com.ys.fishingfirst.ui.point.PointFragment"
         android:label="@string/menu_point"
-        tools:layout="@layout/fragment_preparation" />
+        tools:layout="@layout/fragment_point" />
 </navigation>
