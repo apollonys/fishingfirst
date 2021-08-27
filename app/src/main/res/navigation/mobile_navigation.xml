@@ -15,7 +15,11 @@
         android:id="@+id/nav_knot"
         android:name="com.ys.fishingfirst.ui.knot.KnotFragment"
         android:label="@string/menu_knot"
-        tools:layout="@layout/fragment_knot" />
+        tools:layout="@layout/fragment_knot" >
+        <action
+            android:id="@+id/action_nav_knot_to_knotTargetListFragment"
+            app:destination="@id/knotTargetListFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/nav_preparation"
@@ -28,4 +32,9 @@
         android:name="com.ys.fishingfirst.ui.point.PointFragment"
         android:label="@string/menu_point"
         tools:layout="@layout/fragment_point" />
+    <fragment
+        android:id="@+id/knotTargetListFragment"
+        android:name="com.ys.fishingfirst.ui.knot.KnotTargetListFragment"
+        android:label="매듭법 상세"
+        tools:layout="@layout/fragment_knot_target_list"/>
 </navigation>

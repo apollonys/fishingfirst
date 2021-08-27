@@ -7,20 +7,28 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
+import androidx.core.os.bundleOf
+import androidx.navigation.NavController
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.ys.fishingfirst.R
 
 class KnotListAdapter(private val context: Context) : RecyclerView.Adapter<KnotListAdapter.KnotHolder>(){
+    lateinit var navController : NavController
+
     var datas = mutableListOf<KnotData>()
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): KnotHolder {
-        val view = LayoutInflater.from(context).inflate(R.layout.fregment_knot_list_item,parent,false)
+        val view = LayoutInflater.from(context).inflate(R.layout.fragment_knot_list_item,parent,false)
+
+
         return KnotHolder(view)
     }
 
     override fun getItemCount(): Int = datas.size
 
     override fun onBindViewHolder(holder: KnotHolder, position: Int) {
+
         val item = datas[position]
         val listener = View.OnClickListener {it ->
             setClickListner(it, item)
@@ -30,7 +38,9 @@ class KnotListAdapter(private val context: Context) : RecyclerView.Adapter<KnotL
     }
 
     private fun setClickListner(it: View, item: KnotData) {
-        Toast.makeText(it.context, "Clicked: ${item.name}", Toast.LENGTH_SHORT).show()
+        val bundle = bundleOf("param1" to item.name)//DATA를 navigate를 통해 전달한다.
+        navController.navigate(R.id.knotTargetListFragment,bundle)
+
     }
 
     inner class KnotHolder(view: View) : RecyclerView.ViewHolder(view) {
